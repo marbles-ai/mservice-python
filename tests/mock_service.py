@@ -8,7 +8,6 @@ from optparse import OptionParser
 # Modify python path
 thisdir = os.path.dirname(os.path.abspath(__file__))
 srcdir = os.path.dirname(thisdir)
-print(srcdir)
 sys.path.insert(0, srcdir)
 
 

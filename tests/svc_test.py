@@ -18,16 +18,9 @@ class SvcTest(unittest.TestCase):
         # Wait for a bit
         time.sleep(10)
         # Check if success
-        ps = psutil.Process(daemon.pid)
-        os.kill(daemon.pid, signal.SIGINT)
-        time.sleep(5)
-        killed = False
-        try:
-            ps = psutil.Process(daemon.pid)
-        except psutil.NoSuchProcess:
-            killed = True
-        self.assertTrue(killed)
-
+        daemon.send_signal(signal.SIGINT)
+        daemon.wait()
+        self.assertTrue(daemon.returncode == 0)
 
 if __name__ == '__main__':
     unittest.main()

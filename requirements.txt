@@ -6,4 +6,3 @@ watchtower
 setuptools
 wheel
 python_daemon
-psutil
