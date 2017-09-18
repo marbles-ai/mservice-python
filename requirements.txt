@@ -1,0 +1,9 @@
+protobuf
+grpcio
+grpcio-tools
+boto3
+watchtower
+setuptools
+wheel
+python_daemon
+psutil
