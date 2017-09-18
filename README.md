@@ -1,10 +1,7 @@
-# Marbles deployment
+# Service support for python
 
-Core stuff for python services, gRPC and AWS. The gRPC proto files are located at submodule [proto](./proto). 
-The base gRPC service interfaces are built for python and included with the package.  This allows us to control gRPC 
-deployment from a python script.
-
-Currently we only use AWS however we can add other service providers to this package.
+Core stuff for python services and gRPC endpoints. The gRPC proto files are located in submodule [proto](./proto). 
+The base gRPC service interfaces are included with the wheel.
 
 ## Cloning
 This project links to a protobuf submodule. After cloning this project you must run:
@@ -13,9 +10,9 @@ git submodule init
 git submodule update
 ```
 
-Alternatively you can do:
+Alternatively you can do this when you clone:
 ```
-git clone --recursive https://github.com/marbles-ai/marbles-proto.git
+git clone --recursive https://github.com/marbles-ai/mservice-python.git
 ```
 
 ## Building the wheel
